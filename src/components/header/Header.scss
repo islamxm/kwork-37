@@ -1,0 +1,119 @@
+@import '../../styles/vars.scss';
+
+.header {
+    height: 97px;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(0deg, rgba(89, 83, 107, 0.02), rgba(89, 83, 107, 0.02)), rgba(107, 85, 240, 0.06);
+    border-bottom: 1px solid #D8DAEB;
+
+    &__vls.complete {
+
+        &:after {
+            border: none;
+            height: 2px;
+            background-color: $purp;
+            top: calc(50% - (2px / 2));
+        }
+        .header__vls_item {
+            
+            .header__vls_item_val {
+                background-color: $purp;
+                color: #fff;
+                border-color: $purp;
+            }
+
+            .header__vls_item_name {
+                color: $purp;
+                font-weight: 600;
+            }
+        }
+        .header__vls_item.active {
+            
+            .header__vls_item_val {
+                background-color: #fff;
+                color: $purp;
+                border-color: $purp;
+                border-width: 2px;
+            }
+
+            .header__vls_item_name {
+                color: $text;
+                font-weight: 400;
+            }
+        }
+        
+    }
+    &__vls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: '';
+            height: 0;
+            border-bottom: 1px dashed $text;
+            width: 100%;
+            top: calc(50% - (1px / 2));
+            left: 0;
+        }
+
+        &_item.active {
+
+            .header__vls_item_val {
+                background-color: $purp;
+                color: #fff;
+                border-color: $purp;
+            }
+            .header__vls_item_name {
+                color: $purp;
+                font-weight: 600;
+            }
+        }
+        
+        &_item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            margin: 0 100px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+            &_val {
+                // margin-bottom: 8px;
+                width: 24px;
+                height: 24px;
+                border-radius: 100%;
+                background: #FDFCFE;
+                border: 1px solid #59536B;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+                @include anim;
+            }
+
+            &_name {
+                position: absolute;
+                bottom: -20px;
+                left: calc(50% - (130px / 2));
+                width: 130px;
+                text-align: center;
+
+                @include anim;
+            }
+        }
+    }
+}

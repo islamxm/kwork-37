@@ -1,0 +1,57 @@
+.select {
+
+    &__name {
+        font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+margin-bottom: 8px;
+    }
+    .basic-single {
+
+        width: 100%;
+        .select__control  {
+            background: linear-gradient(0deg, rgba(89, 83, 107, 0.02), rgba(89, 83, 107, 0.02)), rgba(107, 85, 240, 0.03);
+            /* border-color */
+            transition: none;
+            border: 1px solid #D8DAEB;
+            border-radius: 2px;
+            min-height: unset;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 19px;
+            color: $text;
+
+            .select__placeholder  {
+                margin: 0;
+            }
+
+            .select__input-container {
+                margin: 0;
+                padding: 3px 0;
+            }
+        }
+
+        .select__control.select__control--is-focused {
+            // border: none;
+            outline: none;
+            background-color: none;
+        }
+
+        .select__indicators  {
+            span {
+                display: none;
+            }
+            .select__indicator {
+                padding: 0;
+                width: 20px;
+                height: 20px;
+                background-image: url('../../img/arrow.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                svg {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.input {
+
+    &__name {
+        margin-bottom: 8px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    &__el {
+        background: linear-gradient(0deg, rgba(89, 83, 107, 0.02), rgba(89, 83, 107, 0.02)), rgba(107, 85, 240, 0.03);
+        /* border-color */
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        border: 1px solid #D8DAEB;
+        border-radius: 2px;
+        padding: 5px 10px;
+        display: block;
+        width: 100%;
+    }
+}
