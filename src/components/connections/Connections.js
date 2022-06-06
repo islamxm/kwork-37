@@ -48,10 +48,16 @@ export const Connections = () => {
         setResultGcp, 
         setResultOracle, 
         setResultAb, 
-        setGlobalStep} = useGlobal();
+        setGlobalStep,
+        setGlobalSh} = useGlobal();
 
     setGlobalStep(true);
     
+
+    const backBtnHandler = (bool) => {
+        setGlobalSh(bool);
+        setGlobalStep(bool)
+    }
 
     return (
         <>
@@ -259,22 +265,22 @@ export const Connections = () => {
                                         <div className="checkbox__name">Services</div>
                                         <div className="checkbox__list">
                                             <div className="checkbox__item">
-                                                <Checkbox label={'FWaaS'} id={'azure1'}/>
+                                                <Checkbox icon={fwaas} label={'FWaaS'} id={'azure1'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'DDoS'} id={'azure2'}/>
+                                                <Checkbox icon={ddos} label={'DDoS'} id={'azure2'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'SWG'} id={'azure3'}/>
+                                                <Checkbox icon={swg} label={'SWG'} id={'azure3'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'IPS/IDS'} id={'azure4'}/>
+                                                <Checkbox icon={ips} label={'IPS/IDS'} id={'azure4'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'NAT'} id={'azure5'}/>
+                                                <Checkbox icon={nat} label={'NAT'} id={'azure5'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'LB'} id={'azure6'}/>
+                                                <Checkbox icon={lb} label={'LB'} id={'azure6'}/>
                                             </div>
                                         </div>
                                     </div>
@@ -361,22 +367,22 @@ export const Connections = () => {
                                         <div className="checkbox__name">Services</div>
                                         <div className="checkbox__list">
                                             <div className="checkbox__item">
-                                                <Checkbox label={'FWaaS'} id={'aws1'}/>
+                                                <Checkbox icon={fwaas} label={'FWaaS'} id={'aws1'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'DDoS'} id={'aws2'}/>
+                                                <Checkbox icon={ddos} label={'DDoS'} id={'aws2'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'SWG'} id={'aws3'}/>
+                                                <Checkbox icon={swg} label={'SWG'} id={'aws3'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'IPS/IDS'} id={'aws4'}/>
+                                                <Checkbox icon={ips} label={'IPS/IDS'} id={'aws4'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'NAT'} id={'aws5'}/>
+                                                <Checkbox icon={nat} label={'NAT'} id={'aws5'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'LB'} id={'aws6'}/>
+                                                <Checkbox icon={lb} label={'LB'} id={'aws6'}/>
                                             </div>
                                         </div>
                                     </div>
@@ -463,22 +469,22 @@ export const Connections = () => {
                                         <div className="checkbox__name">Services</div>
                                         <div className="checkbox__list">
                                             <div className="checkbox__item">
-                                                <Checkbox label={'FWaaS'} id={'gsp1'}/>
+                                                <Checkbox icon={fwaas} label={'FWaaS'} id={'gsp1'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'DDoS'} id={'gsp2'}/>
+                                                <Checkbox icon={ddos} label={'DDoS'} id={'gsp2'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'SWG'} id={'gsp3'}/>
+                                                <Checkbox icon={swg} label={'SWG'} id={'gsp3'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'IPS/IDS'} id={'gsp4'}/>
+                                                <Checkbox icon={ips} label={'IPS/IDS'} id={'gsp4'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'NAT'} id={'gsp5'}/>
+                                                <Checkbox icon={nat} label={'NAT'} id={'gsp5'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'LB'} id={'gsp6'}/>
+                                                <Checkbox icon={lb} label={'LB'} id={'gsp6'}/>
                                             </div>
                                         </div>
                                     </div>
@@ -565,22 +571,22 @@ export const Connections = () => {
                                         <div className="checkbox__name">Services</div>
                                         <div className="checkbox__list">
                                             <div className="checkbox__item">
-                                                <Checkbox label={'FWaaS'} id={'oracle1'}/>
+                                                <Checkbox icon={fwaas} label={'FWaaS'} id={'oracle1'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'DDoS'} id={'oracle2'}/>
+                                                <Checkbox icon={ddos} label={'DDoS'} id={'oracle2'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'SWG'} id={'oracle3'}/>
+                                                <Checkbox icon={swg} label={'SWG'} id={'oracle3'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'IPS/IDS'} id={'oracle4'}/>
+                                                <Checkbox icon={ips} label={'IPS/IDS'} id={'oracle4'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'NAT'} id={'oracle5'}/>
+                                                <Checkbox icon={nat} label={'NAT'} id={'oracle5'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'LB'} id={'oracle6'}/>
+                                                <Checkbox icon={lb} label={'LB'} id={'oracle6'}/>
                                             </div>
                                         </div>
                                     </div>
@@ -667,22 +673,22 @@ export const Connections = () => {
                                         <div className="checkbox__name">Services</div>
                                         <div className="checkbox__list">
                                             <div className="checkbox__item">
-                                                <Checkbox label={'FWaaS'} id={'ab1'}/>
+                                                <Checkbox icon={fwaas} label={'FWaaS'} id={'ab1'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'DDoS'} id={'ab2'}/>
+                                                <Checkbox icon={ddos} label={'DDoS'} id={'ab2'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'SWG'} id={'ab3'}/>
+                                                <Checkbox icon={swg} label={'SWG'} id={'ab3'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'IPS/IDS'} id={'ab4'}/>
+                                                <Checkbox icon={ips} label={'IPS/IDS'} id={'ab4'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'NAT'} id={'ab5'}/>
+                                                <Checkbox icon={nat} label={'NAT'} id={'ab5'}/>
                                             </div>
                                             <div className="checkbox__item">
-                                                <Checkbox label={'LB'} id={'ab6'}/>
+                                                <Checkbox icon={lb} label={'LB'} id={'ab6'}/>
                                             </div>
                                         </div>
                                     </div>
@@ -694,7 +700,7 @@ export const Connections = () => {
             </div>
             <div className="content__action">
                 <div className="content__action_item content__action_item-first">
-                    <Link onClick={() => setGlobalStep(false)} className='content__action_btn' to={'/'}>
+                    <Link onClick={() => backBtnHandler(false)} className='content__action_btn' to={'/'}>
                         <div className="content__action_btn_icon">
                             <img src={prev} alt="" />
                         </div>

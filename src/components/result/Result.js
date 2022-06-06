@@ -17,6 +17,8 @@ import resGsp from '../../img/res-gsp.png';
 import resOracle from '../../img/res-oracle.svg';
 import resAb from '../../img/res-ab.svg';
 
+import shImg from '../../img/sh.svg';
+
 const getBase64 = (img, callback) => {
     const reader = new FileReader();
     reader.addEventListener('load', () => callback(reader.result));
@@ -57,7 +59,8 @@ export const Result = () => {
         aws,
         gcp,
         oracle,
-        ab} = useGlobal();
+        ab,
+        sh} = useGlobal();
     
     const [loading, setLoading] = useState(false);
     const [imageUrl, setImageUrl] = useState();
@@ -138,7 +141,10 @@ export const Result = () => {
                     </Upload>
                 </div>
 
-                <div className="result__arrow">
+                <div className="result__arrow result__arrow-sh">
+                    {sh ? <div className="result__arrow-sh_item">
+                        <img src={shImg} alt="" />
+                    </div> : null}
                     <img src={line} alt="" />
                 </div>
                 <div className="result__cns">

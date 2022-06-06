@@ -22,7 +22,7 @@ const locOptions = [
 export const Access = () => {
 
 
-    const {loc, type, customer, setGlobalType, setGlobalLoc, setGlobalCustomer, setGlobalStep} = useGlobal(); 
+    const {loc, type, customer, setGlobalType, setGlobalLoc, setGlobalCustomer, setGlobalStep, setGlobalSh} = useGlobal(); 
     
     const customerHandler = (e) => {
         setGlobalCustomer(e.target.value);
@@ -34,6 +34,11 @@ export const Access = () => {
 
     const locHandler = (val) => {
         setGlobalLoc(val.label);
+    }
+
+    const nextBtnHandler = (bool) => {
+        setGlobalStep(bool);
+        setGlobalSh(bool)
     }
 
     return (
@@ -108,7 +113,7 @@ export const Access = () => {
             <div className="content__action">
                 <div className="content__action_item"></div>
                 <div className="content__action_item content__action_item-last">
-                    <Link onClick={() => setGlobalStep(true)}  className='content__action_btn content__action_btn-fill' to={'/step-2'}>
+                    <Link onClick={() => nextBtnHandler(true)}  className='content__action_btn content__action_btn-fill' to={'/step-2'}>
                         <div className="content__action_btn_text">Next</div>
                         <div className="content__action_btn_icon">
                             <img src={next} alt="" />

@@ -6,6 +6,7 @@ export const VlsProvider = ({children}) => {
     const [type, setType] = useState('');
     const [loc, setLoc] = useState('');
     const [customer, setCustomer] = useState('');
+    const [sh, setSh] = useState(false);
 
 
     //result
@@ -60,6 +61,9 @@ export const VlsProvider = ({children}) => {
     const setGlobalCustomer = (customer) => {
         setCustomer(customer);
     }
+    const setGlobalSh = (bool) => {
+        setSh(bool);
+    }
 
 
     const value = {type, 
@@ -72,6 +76,8 @@ export const VlsProvider = ({children}) => {
                    gcp, 
                    oracle, 
                    ab,
+                   sh,
+
                    setResultInternet,
                    setResultAzure,
                    setResultAws,
@@ -81,7 +87,8 @@ export const VlsProvider = ({children}) => {
                    setGlobalCustomer, 
                    setGlobalType, 
                    setGlobalLoc, 
-                   setGlobalStep};
+                   setGlobalStep,
+                   setGlobalSh};
 
     return (
         <VlsContext.Provider value={value}>
